@@ -148,25 +148,25 @@ const certifications = [
 ];
 
 // Function to display certifications as tiles
-// function displayCertifications() {
-//   const certificationContainer = document.getElementById('certificationContainer');
-//   certificationContainer.innerHTML = '';
+function displayCertifications() {
+  const certificationContainer = document.getElementById('certificationContainer');
+  certificationContainer.innerHTML = '';
 
-//   certifications.forEach(certification => {
-//     const certificationTile = document.createElement('div');
-//     certificationTile.classList.add('certification-tile');
+  certifications.forEach(certification => {
+    const certificationTile = document.createElement('div');
+    certificationTile.classList.add('certification-tile');
 
-//     const certElement = document.createElement('p');
-//     certElement.textContent = certification;
+    const certElement = document.createElement('p');
+    certElement.textContent = certification;
 
-//     certificationTile.appendChild(certElement);
-//     certificationContainer.appendChild(certificationTile);
-//   });
-// }
+    certificationTile.appendChild(certElement);
+    certificationContainer.appendChild(certificationTile);
+  });
+}
   // Event listener for filtering projects
   document.getElementById('filterInput').addEventListener('input', displayProjects);
   
   // Initial display of projects and education
   displayProjects();
   displayEducation();
-  // displayCertifications(); 
+  displayCertifications(); 
